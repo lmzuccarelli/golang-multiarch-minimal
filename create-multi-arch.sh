@@ -8,7 +8,7 @@ podman push localhost:5000/test/opm-service:linux-amd64 --tls-verify=false
 
 podman manifest create localhost:5000/test/opm-service:v1.0.0 localhost:5000/test/opm-service:linux-arm64 localhost:5000/test/opm-service:linux-amd64 
 
-podman push manifest localhost:5000/test/opm-service:v1.0.0 --tls-verify=false
+podman manifest push localhost:5000/test/opm-service:v1.0.0 --tls-verify=false
 
 # finally test it out
 podman build -t localhost:5000/container-test:v1.0.0 -f rebuild-catalog.containerfile 
